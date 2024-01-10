@@ -1,0 +1,22 @@
+{
+	"name": "tgtestnode",
+	"private": true,
+	"version": "0.0.0",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"start": "nodemon --env-file=.env main.js",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2",
+		"vite": "^5.0.8"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"node-telegram-bot-api": "^0.64.0"
+	}
+}
