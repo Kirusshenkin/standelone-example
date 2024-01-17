@@ -1,13 +1,15 @@
-"use strict";
+var TelegramBot = require("node-telegram-bot-api");
+var express = require("express");
+var json = require("express").json;
+var dotenv = require("dotenv");
 
-import TelegramBot from "node-telegram-bot-api";
-import express, { json } from "express";
+dotenv.config();
 
-const token = process.env.TOKEN;
-const webAppUrl = process.env.URL;
+var token = process.env.TOKEN;
+var webAppUrl = process.env.URL;
 
-const bot = new TelegramBot(token, { polling: true });
-const app = express();
+var bot = new TelegramBot(token, { polling: true });
+var app = express();
 
 app.use(json());
 
